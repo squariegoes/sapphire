@@ -1,0 +1,72 @@
+{% extends "template.html" %}
+
+
+{% block script %}
+
+    <style>
+        #map_canvas_large {
+            width: 600px;
+            height: 350px;
+        }
+        #map_canvas_mobile {
+            width: 270px;
+            height: 250px;
+        }
+    </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize(elm, zoom) {
+          var myLatlng = new google.maps.LatLng(55.939735, -3.220822);
+          var mapOptions = {
+            zoom: zoom,
+            center: myLatlng
+          }
+          var map = new google.maps.Map(document.getElementById(elm), mapOptions);
+
+          var marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+              title: 'Golden Chopsticks'
+          });
+        }
+
+        function initMap() {
+            initialize('map_canvas_large', 16);
+            initialize('map_canvas_mobile', 15);
+        };
+
+        google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row" style="margin-bottom:20px">
+        <div class="col-xs-12">
+            <div class="nontransbox">
+                <h1>Contact us</h1>
+
+                <address>
+                    <strong>So Good Chinese and Thai Takeaway</strong><br>
+                    5 Dundee Terrace<br>
+                    Edinburgh<br>
+                    EH11 1DL<br>
+                    Tel: 0131 228 8818<br>
+                    Tel: 0131 229 5414
+                </address>
+
+                <address>
+                    <strong>Opening hours</strong><br>
+                    Open 7 Days 4pm - 11pm<br>
+                </address>
+
+                <div id="map_canvas_large" class="hidden-xs" style="margin-bottom:15px"></div>
+                <div id="map_canvas_mobile" class="visible-xs" style="margin-bottom:15px"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

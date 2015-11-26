@@ -1,0 +1,41 @@
+div.footer-container
+{
+    background:#191919;
+    padding-bottom:20px;
+}
+
+h3.footer-hdr
+{
+    color:#DDD;
+    padding-bottom:5px;
+}
+
+img.footer-social-media-img
+{
+    padding-bottom:15px;
+}
+
+img.footer-img
+{
+    vertical-align:text-middle;
+}
+
+p.footer-text
+{
+    /*color:#777;*/
+    color:#c3c3c3;
+}
+
+div.footer-spacer
+{
+    padding-top:0px;
+}
+
+hr.footer-hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 5px;
+    margin-bottom: 2px;
+}
