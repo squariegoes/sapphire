@@ -7,8 +7,9 @@
 
 
 body{
-  background-image: url('/static/images/background/navy_blue.png');
+  /*background-image: url('/static/images/background/navy_blue.png');*/
   /*background-image: url('/static/images/background/vertical_cloth.png');*/
+  background-image: url('/static/images/background/wild_oliva.png');
 
   /*background: black;*/
   padding-top: 20px;
@@ -29,12 +30,10 @@ div.main-container
     padding-left:0px;
     padding-right:0px;
     margin-bottom:0px;
-
--webkit-box-shadow: 0px 0px 11px 6px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 11px 6px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 11px 6px rgba(0,0,0,0.75);
-
-background: #d3d7e5;
+    -webkit-box-shadow: 0px 0px 11px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 11px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 11px 6px rgba(0,0,0,0.75);
+    background: #d3d7e5;
 }
 
 
@@ -72,11 +71,12 @@ nav.navbar-custom
     margin-left: 0px;
     border-radius: 0px;
     margin-bottom: 0px;
-    border-top: solid 1px #7f0000;
-    border-bottom: solid 1px #7f0000;
+    /*border-top: solid 1px #7f0000;*/
+    border-bottom: solid 1px #6c7bb3;
 
     /*background: #323232;*/
-    background: #b20000;
+    /*background: #b20000;*/
+    background: #5B6CAA;
 }
 
 
@@ -186,11 +186,6 @@ p{
 	color: #C8C8C8;
 }
 
-#test{
-	color: orange;
-}
-
-
 
 .nav-link-text{color:#E18A07;}
 
@@ -222,25 +217,27 @@ p{
 
 /* non-active link */
 .navbar-default .navbar-nav > li > a {
-    color: #198c19;
+    color: #0f131e;
+    letter-spacing: 1px;
 }
+/* non-active link - focus */
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #f36700;
+    color: #303b5e;
+    letter-spacing: 1px;
 }
 
-/* active link */
+/* Active link */
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #f36700;
+    background-color: #3B4E93;
+    color: #f4f6fe;
+    letter-spacing: 1px;
 }
-/*.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-    color: #555;
-    background-color: #D5D5D5;
-}*/
+
+
+
 
 
 
@@ -256,16 +253,6 @@ p{
 
 
 
-@font-face {
-    font-family: Test;
-    
-    /*src: url(http://www.font-face.com/fonts/delicious/Delicious-Roman.otf);*/
-    src: url(/static/fonts/AlexBrush-Regular.ttf);
-    
-    font-weight:400;
-}
-
-
 /*Fixes carousel banner left alignment issue*/
 .carousel-inner > .item > img { margin: 0 auto; }
 
@@ -273,4 +260,10 @@ p{
 img.autoScale
 {
     width: 100%;
+}
+
+#map_canvas
+{
+    width: 235px;
+    height: 210px;
 }
